@@ -626,10 +626,7 @@ function AgendaPage() {
           mensagem
         )}`;
 
-      window.open(
-        url,
-        "_blank"
-      );
+      window.location.href = url;
     } catch (error: any) {
       setErro(
         error.response?.data?.mensagem ||
@@ -701,10 +698,7 @@ function AgendaPage() {
           mensagem
         )}`;
 
-      window.open(
-        url,
-        "_blank"
-      );
+      window.location.href = url;
     } catch (error: any) {
       setErro(
         error.response?.data?.mensagem ||
