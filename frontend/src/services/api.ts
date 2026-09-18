@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5286/api",
+  baseURL: "https://agendamarcada-production.up.railway.app/api",
 });
 
 api.interceptors.request.use((config) => {
@@ -15,3 +15,4 @@ api.interceptors.request.use((config) => {
 });
 
 export default api;
+
