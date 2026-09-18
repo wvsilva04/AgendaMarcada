@@ -1,0 +1,690 @@
+/* ==============================
+   AGENDA
+   ============================== */
+
+.agenda-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ==============================
+   CABEÇALHO
+   ============================== */
+
+.agenda-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.agenda-eyebrow {
+  margin: 0 0 8px;
+  color: var(--brick-600);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.agenda-title {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.agenda-description {
+  margin: 10px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.agenda-new-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--brick-500);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+  flex-shrink: 0;
+}
+
+.agenda-new-button:hover {
+  background: var(--brick-600);
+}
+
+.agenda-new-button:active {
+  transform: translateY(1px);
+}
+
+.agenda-new-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* ==============================
+   NAVEGAÇÃO DE DATA
+   ============================== */
+
+.agenda-date-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(20, 33, 61, 0.07);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(15, 27, 45, 0.03);
+}
+
+.agenda-date-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ink-700);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.agenda-date-button:hover {
+  background: var(--sand-100);
+  color: var(--ink-950);
+  border-color: var(--sand-200);
+}
+
+.agenda-date-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.agenda-date {
+  text-align: center;
+}
+
+.agenda-date p {
+  margin: 0 0 4px;
+  color: var(--brick-600);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+
+.agenda-date strong {
+  display: block;
+  color: var(--ink-950);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ==============================
+   DIA
+   ============================== */
+
+.agenda-day {
+  width: 100%;
+}
+
+.agenda-day-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.agenda-card-label {
+  margin: 0 0 5px;
+  color: var(--brick-600);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+.agenda-day-header h2 {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.agenda-count {
+  color: var(--ink-700);
+  font-size: 12px;
+}
+
+/* ==============================
+   LISTA
+   ============================== */
+
+.agenda-lista {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ==============================
+   CARD DO AGENDAMENTO
+   ============================== */
+
+.agenda-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 28px;
+  row-gap: 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(20, 33, 61, 0.07);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(15, 27, 45, 0.03);
+}
+
+.agenda-item-main {
+  min-width: 0;
+}
+
+.agenda-item-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.agenda-item-horario {
+  color: var(--ink-950);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.agenda-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.agenda-status.ativo {
+  background: rgba(46, 125, 50, 0.08);
+  color: #2e7d32;
+}
+
+.agenda-status.inativo {
+  background: rgba(198, 40, 40, 0.08);
+  color: #c62828;
+}
+
+.agenda-status.pendente {
+  background: rgba(245, 158, 11, 0.10);
+  color: #b45309;
+}
+
+.agenda-item-info {
+  min-width: 0;
+  margin-top: 6px;
+}
+
+.agenda-item-info h3 {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.agenda-item-info p {
+  margin: 5px 0 0;
+  color: var(--ink-700);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* ==============================
+   AÇÕES
+   ============================== */
+
+.agenda-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  align-self: start;
+  justify-self: end;
+  flex-shrink: 0;
+}
+
+.agenda-edit-button,
+.agenda-more-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ink-700);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.agenda-edit-button:hover,
+.agenda-more-button:hover {
+  background: var(--sand-100);
+  color: var(--ink-950);
+  border-color: var(--sand-200);
+}
+
+.agenda-edit-button svg,
+.agenda-more-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* ==============================
+   MENU
+   ============================== */
+
+.agenda-more-wrapper {
+  position: relative;
+}
+
+.agenda-actions-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 20;
+  width: 170px;
+  padding: 6px;
+  background: #ffffff;
+  border: 1px solid rgba(20, 33, 61, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(15, 27, 45, 0.12);
+}
+
+.agenda-actions-menu button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.agenda-actions-menu button svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.agenda-actions-menu button.cancelar {
+  color: #c62828;
+}
+
+.agenda-actions-menu button.ativar {
+  color: #2e7d32;
+}
+
+.agenda-actions-menu button.cancelar:hover {
+  background: rgba(198, 40, 40, 0.06);
+  color: #b42318;
+}
+
+.agenda-actions-menu button.ativar:hover {
+  background: rgba(46, 125, 50, 0.06);
+  color: #2e7d32;
+}
+
+/* ==============================
+   ESTADO VAZIO
+   ============================== */
+
+.agenda-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(20, 33, 61, 0.07);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.agenda-empty-title {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.agenda-empty-description {
+  max-width: 420px;
+  margin: 8px 0 0;
+  color: #7b8490;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ==============================
+   FORMULÁRIO
+   ============================== */
+
+.agendamento-form {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+  padding: 28px;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: -12px 0 35px rgba(15, 27, 45, 0.12);
+  overflow-y: auto;
+}
+
+.agendamento-form-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(20, 33, 61, 0.1);
+}
+
+.agendamento-form-header h2 {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.agendamento-close-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid rgba(20, 33, 61, 0.12);
+  border-radius: 7px;
+  background: #ffffff;
+  color: var(--ink-700);
+  cursor: pointer;
+}
+
+.agendamento-close-button:hover {
+  background: var(--sand-100);
+  color: var(--ink-950);
+}
+
+.agendamento-close-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ==============================
+   CAMPOS
+   ============================== */
+
+.agendamento-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.agendamento-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.agendamento-field label {
+  color: var(--ink-900);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.agendamento-field input,
+.agendamento-field select {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 13px 14px;
+  border: 1px solid var(--sand-200);
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: var(--ink-950);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.agendamento-field input:focus,
+.agendamento-field select:focus {
+  border-color: var(--brick-500);
+  box-shadow: 0 0 0 3px rgba(181, 86, 60, 0.1);
+}
+
+/* ==============================
+   AÇÕES DO FORMULÁRIO
+   ============================== */
+
+.agendamento-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+.agendamento-cancel-button,
+.agendamento-save-button {
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.agendamento-cancel-button {
+  border: 1px solid var(--sand-200);
+  background: #ffffff;
+  color: var(--ink-900);
+}
+
+.agendamento-cancel-button:hover {
+  background: var(--sand-100);
+}
+
+.agendamento-save-button {
+  border: 0;
+  background: var(--brick-500);
+  color: #ffffff;
+}
+
+.agendamento-save-button:hover {
+  background: var(--brick-600);
+}
+
+.agendamento-save-button:disabled,
+.agendamento-cancel-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* ==============================
+   RESPONSIVO
+   ============================== */
+
+@media (max-width: 800px) {
+  .agenda-item {
+    column-gap: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .agenda-header {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .agenda-title {
+    font-size: 36px;
+  }
+
+  .agenda-new-button {
+    width: 100%;
+  }
+
+  .agenda-item {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .agenda-item-actions {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .agenda-item {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .agenda-item-actions {
+    grid-column: 1;
+    grid-row: auto;
+    justify-content: flex-end;
+  }
+
+  .agenda-day-header {
+    align-items: flex-start;
+  }
+
+  .agenda-count {
+    padding-top: 3px;
+    white-space: nowrap;
+  }
+
+  .agenda-empty {
+    min-height: 200px;
+  }
+
+  .agendamento-form {
+    max-width: none;
+    padding: 24px 20px;
+  }
+
+  .agendamento-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .agendamento-cancel-button,
+  .agendamento-save-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .agenda-title {
+    font-size: 32px;
+  }
+
+  .agenda-description {
+    font-size: 13px;
+  }
+
+  .agenda-item {
+    gap: 12px;
+  }
+
+  .agenda-item-top {
+    gap: 7px;
+  }
+
+  .agenda-item-horario {
+    font-size: 15px;
+  }
+
+  .agenda-item-info h3 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .agenda-status {
+    padding: 4px 7px;
+    font-size: 8px;
+  }
+
+  .agenda-edit-button,
+  .agenda-more-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .agendamento-form {
+    padding: 20px 16px;
+  }
+
+  .agendamento-form-header h2 {
+    font-size: 24px;
+  }
+}

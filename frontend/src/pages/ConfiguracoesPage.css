@@ -1,0 +1,278 @@
+/* =========================
+   PÁGINA
+   ========================= */
+
+.configuracoes-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+.configuracoes-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.configuracoes-eyebrow {
+  margin: 0 0 8px;
+  color: var(--brick-600);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.configuracoes-title {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.configuracoes-description {
+  margin: 10px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================
+   MENSAGENS
+   ========================= */
+
+.configuracoes-erro,
+.configuracoes-sucesso {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.configuracoes-erro {
+  background: rgba(198, 40, 40, 0.08);
+  border: 1px solid rgba(198, 40, 40, 0.15);
+  color: #b42318;
+}
+
+.configuracoes-sucesso {
+  background: rgba(46, 125, 50, 0.08);
+  border: 1px solid rgba(46, 125, 50, 0.15);
+  color: #2e7d32;
+}
+
+/* =========================
+   CARDS
+   ========================= */
+
+.configuracoes-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 720px;
+}
+
+.configuracoes-card {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid rgba(20, 33, 61, 0.07);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(15, 27, 45, 0.03);
+}
+
+.configuracoes-card-acesso {
+  margin-top: 0;
+}
+
+/* =========================
+   CABEÇALHO DA SEÇÃO
+   ========================= */
+
+.configuracoes-section-header {
+  margin-bottom: 24px;
+}
+
+.configuracoes-section-header h2 {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.configuracoes-section-header p {
+  margin: 8px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================
+   CAMPOS
+   ========================= */
+
+.configuracoes-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.configuracoes-field label {
+  color: var(--ink-900);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.configuracoes-field input,
+.configuracoes-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid var(--sand-200);
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: var(--ink-950);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.configuracoes-field input {
+  height: 44px;
+}
+
+.configuracoes-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.configuracoes-field input::placeholder,
+.configuracoes-field textarea::placeholder {
+  color: #9aa3af;
+}
+
+.configuracoes-field input:focus,
+.configuracoes-field textarea:focus {
+  border-color: var(--brick-500);
+  box-shadow: 0 0 0 3px rgba(181, 86, 60, 0.1);
+}
+
+.configuracoes-field input[readonly] {
+  background: var(--sand-50);
+  color: #6b7280;
+  cursor: default;
+}
+
+.configuracoes-field-help {
+  color: #7b8490;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* =========================
+   AÇÕES DO CARD
+   ========================= */
+
+.configuracoes-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+  padding-top: 4px;
+}
+
+.configuracoes-save-button {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--brick-500);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+.configuracoes-save-button:hover {
+  background: var(--brick-600);
+}
+
+.configuracoes-save-button:active {
+  transform: translateY(1px);
+}
+
+.configuracoes-save-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* =========================
+   RESPONSIVO
+   ========================= */
+
+@media (max-width: 700px) {
+  .configuracoes-header {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .configuracoes-title {
+    font-size: 36px;
+  }
+
+  .configuracoes-cards {
+    max-width: none;
+  }
+
+  .configuracoes-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .configuracoes-title {
+    font-size: 32px;
+  }
+
+  .configuracoes-description {
+    font-size: 13px;
+  }
+
+  .configuracoes-card {
+    padding: 20px 16px;
+  }
+
+  .configuracoes-field {
+    gap: 7px;
+    margin-bottom: 16px;
+  }
+
+  .configuracoes-card-actions {
+    padding-top: 4px;
+  }
+
+  .configuracoes-save-button {
+    width: auto;
+  }
+}
+

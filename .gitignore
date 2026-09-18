@@ -1,0 +1,23 @@
+# .NET
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Node / Vite
+**/node_modules/
+**/dist/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Local configuration
+appsettings.Development.json

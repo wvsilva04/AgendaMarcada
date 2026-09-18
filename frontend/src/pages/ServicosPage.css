@@ -1,0 +1,553 @@
+/* =========================
+   PÁGINA
+   ========================= */
+
+.servicos-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+.servicos-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.servicos-eyebrow {
+  margin: 0 0 8px;
+  color: var(--brick-600);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.servicos-title {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.servicos-description {
+  margin: 10px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.servicos-new-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--brick-500);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  flex-shrink: 0;
+}
+
+.servicos-new-button:hover {
+  background: var(--brick-600);
+}
+
+.servicos-new-button:active {
+  transform: translateY(1px);
+}
+
+.servicos-new-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* =========================
+   LISTA
+   ========================= */
+
+.servicos-list {
+  width: 100%;
+}
+
+.servicos-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.servico-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(20, 33, 61, 0.07);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(15, 27, 45, 0.03);
+}
+
+.servico-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.servico-item-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.servico-item-nome {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.servico-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.servico-status-badge.ativo {
+  background: rgba(46, 125, 50, 0.08);
+  color: #2e7d32;
+}
+
+.servico-status-badge.inativo {
+  background: rgba(198, 40, 40, 0.08);
+  color: #c62828;
+}
+
+.servico-item-preco {
+  margin: 7px 0 0;
+  color: var(--ink-900);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.servico-item-detalhes {
+  margin: 3px 0 0;
+  color: #8a929d;
+  font-size: 12px;
+}
+
+/* =========================
+   AÇÕES
+   ========================= */
+
+.servico-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.servico-edit-button,
+.servico-more-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ink-700);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.servico-edit-button:hover,
+.servico-more-button:hover {
+  background: var(--sand-100);
+  color: var(--ink-950);
+  border-color: var(--sand-200);
+}
+
+.servico-edit-button svg,
+.servico-more-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* =========================
+   MENU ⋮
+   ========================= */
+
+.servico-more-wrapper {
+  position: relative;
+}
+
+.servico-actions-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 20;
+  width: 160px;
+  padding: 6px;
+  background: #ffffff;
+  border: 1px solid rgba(20, 33, 61, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(15, 27, 45, 0.12);
+}
+
+.servico-actions-menu button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 38px;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.servico-actions-menu button:first-child {
+  color: var(--ink-900);
+}
+
+.servico-actions-menu button:last-child {
+  color: #b42318;
+}
+
+.servico-actions-menu button:hover {
+  background: var(--sand-100);
+}
+
+.servico-actions-menu button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.servico-actions-menu svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
+  flex-shrink: 0;
+}
+
+/* =========================
+   ESTADO VAZIO
+   ========================= */
+
+.servicos-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(20, 33, 61, 0.07);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.servicos-empty-title {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.servicos-empty-description {
+  max-width: 420px;
+  margin: 8px 0 0;
+  color: #7b8490;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
+
+.servico-form {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+  padding: 28px;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: -12px 0 35px rgba(15, 27, 45, 0.12);
+  overflow-y: auto;
+}
+
+.servico-form-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.servico-form-header h2 {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.servico-close-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ink-700);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.servico-close-button:hover {
+  background: var(--sand-100);
+  color: var(--ink-950);
+}
+
+.servico-close-button svg {
+  width: 19px;
+  height: 19px;
+}
+
+.servico-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.servico-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.servico-field label {
+  color: var(--ink-900);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.servico-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid var(--sand-200);
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: var(--ink-950);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.servico-field input::placeholder {
+  color: #9aa3af;
+}
+
+.servico-field input:focus {
+  border-color: var(--brick-500);
+  box-shadow: 0 0 0 3px rgba(181, 86, 60, 0.1);
+}
+
+.servico-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+.servico-cancel-button,
+.servico-save-button {
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.servico-cancel-button {
+  border: 1px solid var(--sand-200);
+  background: #ffffff;
+  color: var(--ink-900);
+}
+
+.servico-cancel-button:hover {
+  background: var(--sand-100);
+}
+
+.servico-save-button {
+  border: 0;
+  background: var(--brick-500);
+  color: #ffffff;
+}
+
+.servico-save-button:hover {
+  background: var(--brick-600);
+}
+
+.servico-save-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* =========================
+   RESPONSIVO
+   ========================= */
+
+@media (max-width: 700px) {
+  .servicos-header {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .servicos-title {
+    font-size: 36px;
+  }
+
+  .servicos-new-button {
+    width: 100%;
+  }
+
+  .servico-item {
+    padding: 20px;
+  }
+
+  .servico-item-nome {
+    font-size: 18px;
+  }
+
+  .servico-form {
+    width: 100%;
+    max-width: none;
+    padding: 24px 20px;
+  }
+
+  .servico-form-header {
+    margin-bottom: 28px;
+  }
+
+  .servico-form-header h2 {
+    font-size: 26px;
+  }
+
+  .servico-form-fields {
+    gap: 18px;
+  }
+
+  .servico-form-actions {
+    gap: 10px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicos-title {
+    font-size: 32px;
+  }
+
+  .servicos-description {
+    font-size: 13px;
+  }
+
+  .servico-item {
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .servico-item-top {
+    gap: 7px;
+  }
+
+  .servico-status-badge {
+    padding: 4px 7px;
+    font-size: 9px;
+  }
+
+  .servico-item-actions {
+    gap: 2px;
+  }
+
+  .servico-edit-button,
+  .servico-more-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .servico-form {
+    padding: 20px 16px;
+  }
+
+  .servico-form-header {
+    margin-bottom: 24px;
+  }
+
+  .servico-form-header h2 {
+    font-size: 24px;
+  }
+
+  .servico-form-fields {
+    gap: 16px;
+  }
+
+  .servico-form-actions {
+    flex-direction: column-reverse;
+    margin-top: auto;
+    padding-top: 24px;
+  }
+
+  .servico-cancel-button,
+  .servico-save-button {
+    width: 100%;
+  }
+}
+
